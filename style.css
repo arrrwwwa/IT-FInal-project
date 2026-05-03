@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+.rating {
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+.price {
+    margin-bottom: 25px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 15px;
+}
+
+.current-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #b33939;
+}
+
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: -250px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #a64646;
+}
+
+.btn-secondary:hover {
+    background-color: #8e3a3a;
+    color: white;
+}
+
+
+.btn-primary {
+    background-color: #8e3a3a;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #8e3a3a;
+    color: #8e3a3a;
+}
+
+
+.shipping-info {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.info-item {
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+
+.footer {
+    background: #f9f9f9;
+    padding: 50px 10%;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: #0b0a0a;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    white-space: pre-wrap;
+    margin-left: 0;
+    padding-left: 0;
+    width: 80%;
+}
+
+
+.white-label {
+    position: absolute;
+    margin-left: 400px;
+
+
+}
+
+.cake-label {
+
+    margin-left: 10px;
+    width: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 90%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #C25A53;
+    font-size: 20px;
+}
+
+.menu img {
+
+    margin-top: -7px;
+
+
+}
+
+.menu a:hover {
+    color: #905553;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* 1. Define the animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ingredients-table {
+    width: 450px;
+    margin-top: 90px;
+    border-top: 2px solid #8e3a3a;
+    border-collapse: collapse;
+    margin-left: -500px;
+
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.ingredients-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.ingredients-table tr:hover {
+    background-color: #f9f2f2;
+}
+
+.ingredients-table th {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #8e3a3a;
+    border-bottom: 1px solid #eee;
+}
+
+.ingredients-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #555;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Golden Whisk | Sourdough</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/jpg" href="../icon.jpeg" />
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="logo.png" class="cake-label">
+
+  </div>
+
+  </div>
+  <div class="menu">
+    <a href="landingpage.html">Home</a>
+    <a href="products.html">Sweets</a>
+    <a href="saltyProducts.html">Savory</a>
+    <a href="cart.html">Cart</a>
+    <a>|</a>
+    <img src="STUFF2.png">
+  </div>
+
+  <main class="product-container">
+    <div class="product-image">
+      <img src="croissant.jpg" alt="Croissant" />
+    </div>
+
+    <div class="product-info">
+      <h1>Croissant</h1>
+      <div class="rating">★★★☆☆ <span>4.2/5 (161 Reviews)</span></div>
+
+      <div class="price">
+        <span class="old-price">50.00 EGP</span>
+        <span class="current-price">40.00 EGP</span>
+      </div>
+
+      <pre class="description">
+                Croissant is a buttery, flaky pastry made from yeast-raised dough. 
+                
+                
+
+
+
+
+
+
+
+
+        </pre>
+
+      <div class="actions">
+        <button class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+        <button class="btn btn-secondary" onclick="window.location.href='cart.html'">View cart</button>
+      </div>
+
+
+      <div class="shipping-info">
+        <div class="info-item">🚚 Free Delivery (Check Availability)</div>
+        <div class="info-item">📞 Need help? Call us</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p>
+          Premium bakery delivery serving the freshest treats to your
+          doorstep.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Track Order</a>
+        <a href="#">Refunds</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>info@goldenwhisk.cc</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const product = {
+      name: "croissant",
+      price: "40.00",
+      image: "croissant.jpg "
+    };
+    function addToCart() {
+      let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+      let existingItem = cart.find(item => item.name === "croissant");
+
+      if (existingItem) {
+        existingItem.qty += 1;
+      } else {
+        cart.push({
+          name: "croissant",
+          price: "40.00",
+          qty: 1,
+          image: "croissant.jpg"
+        });
+      }
+      localStorage.setItem('myCart', JSON.stringify(cart));
+      alert("Added to cart!");
+    }
+    document.querySelector('.btn-primary').onclick = addToCart;
+  </script>
+</body>
+
+
+</html>

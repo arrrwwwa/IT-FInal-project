@@ -1,0 +1,149 @@
+h1 {
+    color: white;
+    font: italic small-caps bold 70px almendra;
+    margin-left: 450px;
+    margin-right: auto;
+    width: 600px;
+}
+
+p.test {
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(180deg, #F6C1BD 0%, #CD4C46 70%, #CD4C46 30%);
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* background-image: url(Frame\ 920.png);*/
+}
+
+.white-label {
+    position: absolute;
+    margin-left: 400px;
+
+
+}
+
+.cake-label {
+
+    margin-left: 10px;
+    width: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 90%;
+    padding: 20px 40px;
+    display: flex;
+    /* This keeps your links on one line */
+    justify-content: flex-end;
+    /* This aligns them to the right side */
+    gap: 20px;
+    /* This adds space between your links */
+    z-index: 1000;
+    /* This ensures it stays on top of other content */
+}
+
+/* Optional: Clean up the appearance of the links */
+.menu a {
+    text-decoration: none;
+    color: #C25A53;
+    /* Matches your current text color */
+    font-size: 20px;
+}
+
+.menu img {
+
+    margin-top: -7px;
+
+
+}
+
+/*.menu 
+  color: hwb(4 28% 32%);
+  position: absolute;
+  display: flex;
+  right: 3%;
+  top: 20%;
+  bottom: 50%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+.menu a {
+  text-decoration: none;
+  font-size: medium;
+  color: #cd5452;
+  font-family: sans-serif;
+  padding-top: 1px;
+}*/
+.menu a:hover {
+    color: #905553;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+.test {
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: 900;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+
+.test2 {
+    color: white;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: 900;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+
+.cupcake {
+
+    margin-right: auto;
+    margin-left: 805px;
+    margin-bottom: 40px;
+    margin-top: -250px;
+    width: 600px;
+
+}
+
+.nextpage {
+    margin-left: 80px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 200px;
+    background-color: rgb(250, 154, 154);
+    color: #9a5d59;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    margin-top: auto;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.nextpage:hover {
+    background-color: #f9b4af;
+    transform: translateY(-3px);
+}

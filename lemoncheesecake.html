@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Golden Whisk | Lemon Meringue Cheesecake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="icon.jpeg">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="logo.png" class="cake-label">
+
+    </div>
+    <div class="menu">
+        <a href="landingpage.html">Home</a>
+        <a href="products.html">Sweets</a>
+        <a href="saltyProducts.html">Savory</a>
+        <a href="cart.html">Cart</a>
+        <a>|</a>
+        <img src="STUFF2.png">
+    </div>
+
+    <main class="product-container">
+        <div class="product-image">
+            <img src="Lemon Meringue Cheesecake.jpg" alt="Lemon Meringue Cheesecake">
+        </div>
+
+        <div class="product-info">
+            <h1 style="font-family: 'Didot', serif; font-size: 40px; color: #222;">Lemon Meringue Cheesecake</h1>
+            <div class=" rating">★★★★★ <span>5/5 (230 Reviews)</span>
+            </div>
+
+            <div class="price">
+                <span class="current-price">200.00 EGP</span>
+            </div>
+
+            <pre class="description">
+Zesty Lemon Meringue Cheesecake
+The ultimate fusion of tart and sweet. Our creamy lemon cheesecake sits on a buttery biscuit base, topped with a mountain of toasted, marshmallowy meringue.
+Every slice is a burst of sunshine—light, airy, and intensely refreshing.
+            </pre>
+            <table class="ingredients-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Graham Crackers</td>
+                        <td>Form the buttery, crumbly base .</td>
+                    </tr>
+                    <tr>
+                        <td>Fresh Lemon Juice & Zest</td>
+                        <td>Provide the vibrant yellow color and sharp, citrus flavor.</td>
+                    </tr>
+                    <tr>
+                        <td>Egg Yolks & Cornstarch</td>
+                        <td>Create the thick, stable custard filling.</td>
+                    </tr>
+                    <tr>
+                        <td>Egg Whites & Sugar</td>
+                        <td>Whipped into the towering, toasted meringue topping.</td>
+                    </tr>
+                    <tr>
+                        <td>Butter</td>
+                        <td>Adds richness to both the crust and the lemon curd.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="actions">
+                <button class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+                <button class="btn btn-secondary" onclick="window.location.href='cart.html'">View cart</button>
+            </div>
+
+            <div class="shipping-info">
+                <div class="info-item">🚚 Free Delivery (Check Availability)</div>
+                <div class="info-item">📞 Need help? Call us</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>Premium bakery delivery serving the freshest treats to your doorstep.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Track Order</a>
+                <a href="#">Refunds</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@goldenwhisk.cc</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const product = {
+            name: "Lemon cheesecake",
+            price: "200.00",
+            image: "Lemon Meringue Cheesecake.jpg "
+        };
+        function addToCart() {
+            let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+            let existingItem = cart.find(item => item.name === "Lemon cheesecake");
+
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({
+                    name: "Lemon cheesecake",
+                    price: "200.00",
+                    qty: 1,
+                    image: "Lemon Meringue Cheesecake.jpg "
+                });
+            }
+            localStorage.setItem('myCart', JSON.stringify(cart));
+            alert("Added to cart!");
+        }
+        document.querySelector('.btn-primary').onclick = addToCart;
+    </script>
+
+</body>
+
+</html>

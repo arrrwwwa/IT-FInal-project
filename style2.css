@@ -1,0 +1,144 @@
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 40px;
+    color: #f9a7a7;
+
+}
+
+.white-label {
+    position: absolute;
+    margin-left: 900px;
+
+
+}
+
+.cake-label {
+    margin-left: 10px;
+    width: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    /* This keeps your links on one line */
+    justify-content: flex-end;
+    /* This aligns them to the right side */
+    gap: 20px;
+    /* This adds space between your links */
+    z-index: 1000;
+    /* This ensures it stays on top of other content */
+}
+
+/* Optional: Clean up the appearance of the links */
+.menu a {
+    text-decoration: none;
+    color: #C25A53;
+    /* Matches your current text color */
+    font-size: 20px;
+}
+
+.menu img {
+
+    margin-top: -7px;
+
+
+}
+
+.menu a:hover {
+    color: #905553;
+}
+
+
+.cake {
+    width: 220px;
+    margin-left: 12px;
+}
+
+p.price {
+    color: red;
+    margin-left: 10px;
+    font-weight: 200;
+    word-spacing: 5px;
+}
+
+.name {
+    margin: 10px;
+}
+
+.viewpage {
+    margin-left: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(253, 206, 206);
+    color: #8B322C;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+    padding: 40px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+
+}
+
+.product a:hover {
+    color: #1d1a1a;
+    transform: translateY(-4px);
+    transition: 0.6s;
+    background-color: rgb(254, 173, 176);
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    position: relative;
+}
+
+.searchinput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}

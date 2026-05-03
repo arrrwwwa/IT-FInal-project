@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Golden Whisk | Chocolate cake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="icon.jpeg">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="logo.png" class="cake-label">
+
+    </div>
+    <div class="menu">
+        <a href="landingpage.html">Home</a>
+        <a href="products.html">Sweets</a>
+        <a href="saltyProducts.html">Savory</a>
+        <a href="cart.html">Cart</a>
+        <a>|</a>
+        <img src="STUFF2.png">
+    </div>
+
+    <main class="product-container">
+        <div class="product-image">
+            <img src="Chocolate cake.jpeg" alt="Chocolate cake">
+        </div>
+
+        <div class="product-info">
+            <h1 style="font-family: 'Didot', serif; font-size: 40px; color: #222;">Chocolate cake</h1>
+            <div class="rating">★★★★☆ <span>4.8/5 (135 Reviews)</span></div>
+
+            <div class="price">
+                <span class="old-price">91.00 EGP</span>
+                <span class="current-price">60.00 EGP</span>
+            </div>
+
+            <pre class="description">
+This triple-layer chocolate fudge cake is the definition of decadence.It features a dark, tightly-grained sponge that looks incredibly moist,
+layered with a silky chocolate filling.
+The cake is finished with a glossy chocolate ganache that drips down the sides, paired with swirls of rich fudge frosting and a light dusting of powdered sugar.
+A few fresh raspberries on the side add a sharp, tart contrast to the deep, sweet cocoa, making it as visually stunning as it is indulgent.
+            </pre>
+            <table class="ingredients-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dutch-process Cocoa</td>
+                        <td>Deep color & intense flavor</td>
+                    </tr>
+                    <tr>
+                        <td>Buttermilk</td>
+                        <td>Ultra-tender crumb</td>
+                    </tr>
+                    <tr>
+                        <td>60% Dark Chocolate</td>
+                        <td>Glossy ganache coating</td>
+                    </tr>
+                    <tr>
+                        <td>Fresh Raspberries</td>
+                        <td>Tart flavor balance</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="actions">
+                <button class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+                <button class="btn btn-secondary" onclick="window.location.href='cart.html'">View cart</button>
+            </div>
+
+            <div class="shipping-info">
+                <div class="info-item">🚚 Free Delivery (Check Availability)</div>
+                <div class="info-item">📞 Need help? Call us</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>Premium bakery delivery serving the freshest treats to your doorstep.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Track Order</a>
+                <a href="#">Refunds</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@goldenwhisk.cc</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // On your product page add button:
+        const product = {
+            name: "Chocolate cake",
+            price: "60.00",
+            image: "Chocolate cake.jpeg" // Just the number as a string
+
+
+        };
+        function addToCart() {
+            // 1. Get the cart from memory, or start a new empty list
+            let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+
+            // 2. Check if the cake is already in the cart
+            let existingItem = cart.find(item => item.name === "Chocolate cake");
+
+            if (existingItem) {
+                existingItem.qty += 1; // Just add to the number
+            } else {
+                // Add a new item object
+                cart.push({
+                    name: "Chocolate cake",
+                    price: "60.00",
+                    qty: 1,
+                    image: "Chocolate cake.jpeg"
+
+                });
+            }
+
+            // 3. Save it back to memory
+            localStorage.setItem('myCart', JSON.stringify(cart));
+            alert("Added to cart!");
+        }
+
+        // Connect the function to your "Add to cart" button
+        document.querySelector('.btn-primary').onclick = addToCart;
+    </script>
+
+</body>
+
+</html>

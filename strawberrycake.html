@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Golden Whisk | Strawberry Cheesecake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="icon.jpeg">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="logo.png" class="cake-label">
+
+    </div>
+    <div class="menu">
+        <a href="landingpage.html">Home</a>
+        <a href="products.html">Sweets</a>
+        <a href="saltyProducts.html">Savory</a>
+        <a href="cart.html">Cart</a>
+        <a>|</a>
+        <img src="STUFF2.png">
+    </div>
+
+    <main class="product-container">
+        <div class="product-image">
+            <img src="strawberrycake.png" alt="Strawberry cake">
+        </div>
+
+        <div class="product-info">
+            <h1 style="font-family: 'Didot', serif; font-size: 40px; color: #222;">Strawberry cake</h1>
+            <div class="rating">★★★★☆ <span>4.6/5 (135 Reviews)</span></div>
+
+            <div class="price">
+                <span class="current-price">330.00 EGP</span>
+
+            </div>
+
+            <pre class="description">
+Signature Strawberry Cream Cake
+A light-as-air sponge layered with fresh whipped cream and topped with a crown of hand-picked strawberries.
+This elegant classic is the perfect balance of airy sweetness and refreshing fruit—a timeless treat for any celebration.
+            </pre>
+            <table class="ingredients-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cake Flour</td>
+                        <td>Creates a light, airy sponge texture.</td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Whipping Cream</td>
+                        <td>Provides the smooth, fluffy frosting seen on the exterior.</td>
+                    </tr>
+                    <tr>
+                        <td>Fresh Strawberries</td>
+                        <td>Whole berries used for the signature crown topping.</td>
+                    </tr>
+                    <tr>
+                        <td>Granulated Sugar</td>
+                        <td>Sweetens the cream and the sponge layers.</td>
+                    </tr>
+                    <tr>
+                        <td>Vanilla Bean Paste</td>
+                        <td>Adds those tiny gourmet flecks and a rich aroma.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="actions">
+                <button class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+                <button class="btn btn-secondary" onclick="window.location.href='cart.html'">View cart</button>
+            </div>
+
+            <div class="shipping-info">
+                <div class="info-item">🚚 Free Delivery (Check Availability)</div>
+                <div class="info-item">📞 Need help? Call us</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p>Premium bakery delivery serving the freshest treats to your doorstep.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Track Order</a>
+                <a href="#">Refunds</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@goldenwhisk.cc</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const product = {
+            name: "Strawberry cake",
+            price: "330.00",
+            image: "strawberrycake.png"
+        };
+        function addToCart() {
+            let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+            let existingItem = cart.find(item => item.name === "Strawberry cake");
+
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+
+                cart.push({ ...product, qty: 1 });
+
+            }
+            localStorage.setItem('myCart', JSON.stringify(cart));
+            alert("Added to cart!");
+        }
+        document.querySelector('.btn-primary').onclick = addToCart;
+    </script>
+
+</body>
+
+</html>
