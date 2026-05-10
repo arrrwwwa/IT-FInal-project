@@ -14,4 +14,5 @@ themeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
         themeBtn.innerHTML = '<span class="icon"></span> Dark Mode';
     }
+    localStorage.setItem('user-theme', theme);
 });
